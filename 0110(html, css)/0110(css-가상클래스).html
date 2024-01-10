@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스</title>
+    <link rel="stylesheet" href="./0110(css-가상클래스).css">
+</head>
+<body>
+    <ul>
+        <li><a href="#today">오늘은</a></li>
+        <li><a href="#wed">수요일</a></li>
+        <li><a href="#tom">내일은</a></li>
+        <li><a href="#thu">목요일</a></li>
+    </ul>
+
+    <br><br>
+    <hr>
+
+    <p id="today">
+        기 선택자 이외 요소에 css 효과를 주고 싶을 때<br>
+        특정한 상태가 아닌 규칙에 따라 상태가 바뀌는요소를 선택할 때 사용
+    </p>
+    <p id="wed">
+        [형태] 선택자: pseudo-class{속성:값;}
+    </p>
+    <p id="tom">
+        자주 사용하는 요소
+    </p>
+    <p id="thu">
+        :link = 링크 변경<br>
+        :visited = 한 번 이상 방문한 링크 변경<br>
+        :hober = 마우스 커서가 링크 위에 올라갔을 때 변경<br>
+        :active = 활성화된 요소에 대한 속성 지정<br>
+        :focus = 포커스 받은 요소에 대한 속성 지정<br>
+        :first-child = 첫번째 자식에 대한 속성 지정<br>
+        :lang = 특정 언어에 대한 속성 지정(다국적 홈페이지 구성) <br>
+        :not = 지정한 항목을 제외한 모든 항목 선택 <br>
+        :target = 앵커를 이용해서 웹페이지 안에서 타깃이 되는 부분에 표시 가능
+    </p>
+</body>
+</html>

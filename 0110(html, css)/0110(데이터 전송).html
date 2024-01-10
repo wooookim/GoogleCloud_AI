@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 전송</title>
+</head>
+<body>
+    <!-- form : 제출기능 -->
+    <!-- method 
+            1. get: 브라우저 주소창에 데이터를 넣어서 전달(최대 255자)
+            2. post: 브라우저 주소창에 데이터를노출시키지 않고 전달(소스코드 안쪽에 넣어서 전달)-->
+    <form action="#" method="post">  <!--'#' 생략기능-->
+        <!-- table>(tr>th{ID}+td>input:text)+(tr>th{PW}+td>input:text) -->
+        <table border="1" cellspacing = "0" cellpadding="10" width="300">
+            <tr>
+                <th>ID</th>
+                <td><input type="text" name="id" id=""></td>
+            </tr>
+            <tr>
+                <th>PW</th>
+                <td><input type="text" name="pw" id=""></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="로그인">
+                    <input type="reset" value="다시입력">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+<hr>
+    <h2>네이버 검색 기능 이용하기</h2>
+    <!-- https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EC%A0%9C%EC%A3%BC%EB%82%A0%EC%94%A8 -->
+
+    <!-- method 방식 일치시켜야 가능 -->
+    <form action="https://search.naver.com/search.naver" method="get">
+        <input type="hidden" name="where" value="nexearch">
+        <input type="hidden" name="sm" value="top_hty">
+        <input type="hidden" name="fbm" value="0">
+        <input type="hidden" name="ie" value="utf8">
+        
+        <table>
+            <td><input type="text" name="query"></td>
+            <td><input type="submit" value="검색"></td>
+        </table>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./0110(실습).css">
+</head>
+<body>
+    <div>
+        <div>
+            <span class="title">회원유형</span>
+            <span id="user_type_desc">*표시 항목은 필수 입력 항목입니다.</span>
+        </div>
+        <hr class="hr1">
+        <div>
+            <span class="sub_title">회원유형</span>
+            <span><input type="radio">대기업</span>
+            <span><input type="radio">중소기업</span>
+            <span><input type="radio">대학교</span>
+            <span><input type="radio">정부/공공기관</span>
+            <span><input type="radio">연구기관</span>
+            <span><input type="radio">개인</span>
+            <span><input type="radio">기타</span>
+        </div>
+        <hr class="hr2">
+    </div>
+    <div>
+        <div class="title">로그인 정보</div>
+        <hr class="hr1">
+        <div>
+            <div>
+                <span class="sub_title">아이디</span>
+                <span class="star">*</span>
+                <span>
+                    <span><input type="text" placeholder="아이디(e-mail)를 입력해주세요."></span>
+                    <span><button>이메일 인증</button></span>
+                </span>
+                <div class="describe">*발송된 인증메일이 스팸처리 될 수 있으니, 스팸 메일함도 확인 부탁드립니다.</div>
+            </div>
+            <div>
+                <span class="sub_title">비밀번호</span>
+                <span class="star">*</span>
+                <span>
+                    <span><input type="text" placeholder="비밀번호를 입력해주세요."></span>
+                </span>
+                <div class="describe">*9자 이상 20자 이하,<br> 영문(대/소문자)/숫자/특수문자 등 3개의 문자 유형 모두 표함</div>
+            </div>
+            <div>
+                <span class="sub_title">비밀번호 확인</span>
+                <span class="star">*</span>
+                <span>
+                    <span><input type="text" placeholder="비밀번호를 재입력해주세요."></span>
+                </span>
+            </div>
+        </div>
+        <hr class="hr2">
+    </div>
+    <div>
+        <div class="title">개인정보</div>
+        <hr class="hr1">
+        <div>
+            <span class="sub_title">이름</span>
+            <span class="star">*</span>
+            <span>
+                <span><input type="text" placeholder="이름을 입력해주세요."></span>
+            </span>
+        </div>
+        <div>
+            <span class="sub_title">데이터 신청 동의</span>
+            <span class="star">*</span>
+            <span><input type="radio">동의</span>
+            <span><input type="radio">미동의</span>
+            <div><input type="text">-<input type="text">-<input type="text"><button>휴대전화인증</button></div>
+            <div class="describe">*휴대전화 번호를 입력해주세요. 휴대전화 인증 후 데이터 이용신청을 할 수 있습니다.</div>
+        </div>
+        <div>
+            <span class="sub_title">기업/기관명</span>
+            <span class="star">*</span>
+            <span><input type="text"></span>
+        </div>
+        <div>
+            <span>데이터 신청 동의</span>
+            <span><input type="checkbox">이메일 수신 동의</span>
+            <div class="describe">*데이터 신청 처리 현황 등 주요 서비스 처리 현황에 대한 알림 메일이 발송됩니다.</div>
+        </div>
+        <hr class="hr2">
+    </div>
+    <div>
+        <div class="title">홈페이지 방문경로</div>
+        <hr class="hr1">
+        <div>
+            <span><input type="checkbox">공공기관 홈페이지</span>
+            <span><input type="checkbox">신문기사, 광고</span>
+            <span><input type="checkbox">방송 프로그램</span>
+            <span><input type="checkbox">검색엔진 및 온라인 플랫폼 광고</span>
+            <span><input type="checkbox">유튜브 영상</span>
+        </div>
+        <div>
+            <span><input type="checkbox">페이스북, 블로그 등 SNS 게시글 및 커뮤니티</span>
+            <span><input type="checkbox">공모전 홈페이지(해커톤, 챌린지 등 AI경진대회)</span>
+            <span><input type="checkbox">학교 게시판</span>
+        </div>
+        <div>
+            <span><input type="checkbox">관련 학회 및 협회</span>
+            <span><input type="checkbox">관련 전시회 및 박람회</span>
+            <span><input type="checkbox">지인 소개(개발자, 연구자 등)</span>
+        </div>
+        <div>
+            <span><input type="checkbox">기타<input type="text"></span>
+        </div>
+    </div>
+    <hr class="hr2">
+    <div>
+        <button>취소</button><button>다음</button>
+    </div>
+</body>
+</html>

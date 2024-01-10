@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+
+    <style type="text/css">
+        /*id 선택자 호출*/
+        #aaa{
+            color: pink;
+        }
+
+        /*class 선택자 호출*/
+        .bbb{
+            color: blue;
+        }
+
+        /*실습*/
+        h1{
+            color: red;
+        }
+        p{
+            color: green;
+        }
+
+        /*모든 요소에 효과*/
+        *{
+            font-size: 30px;
+            font-family: "나눔고딕", Dotum, snas-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Type 선택자</h1>
+
+<!-- 
+    첫번째 p 태그만 색상을 바꾸려면
+        - id: 각 요소를 구분하는 속성
+        - id는 중복되면 안됨
+
+    동시에 여러 요소르 묶어서 효과를 주려면
+        - class
+     -->
+
+    <p id="aaa">HTML의 모든 요소는 선택자로 사용가능</p>
+
+    <p class="bbb">HTML의 모든 요소는 선택자로 사용가능</p>
+    <p class="bbb">HTML의 모든 요소는 선택자로 사용가능</p>
+    <p>HTML의 모든 요소는 선택자로 사용가능</p>
+    <p>HTML의 모든 요소는 선택자로 사용가능</p>
+    <p>HTML의 모든 요소는 선택자로 사용가능</p>
+    <p>HTML의 모든 요소는 선택자로 사용가능</p>
+    <p>HTML의 모든 요소는 선택자로 사용가능</p>
+</body>
+</html>
