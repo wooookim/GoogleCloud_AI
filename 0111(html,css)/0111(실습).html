@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./0111(실습).css">
+</head>
+<body>
+    <fieldset class="main_field">
+        <div>Step 1: 가입 정보(필수)</div>
+            <fieldset class="field">
+                아이디 <input type="id" required placeholder="">
+            </fieldset>
+            <fieldset class="field">
+                비밀번호 <input type="password" required placeholder="">
+            </fieldset>
+            <fieldset class="field">
+                비밀번호 확인 <input type="password" required placeholder="">
+            </fieldset>
+            <fieldset class="field">
+                회원등급 <input type="text" required placeholder="새싹">
+            </fieldset>
+            
+
+        <div>Step 2: 개인 정보(선택)</div>
+            <fieldset class="field">
+                이름 <input type="text" required placeholder="5자 미만 공백 없이">
+            </fieldset>      
+            <fieldset class="field">
+                메일주소 <input type="email" required placeholder="example@domain.com">
+            </fieldset>
+            <fieldset class="field">
+                연락처 <input type="text" required>
+            </fieldset>
+            
+
+        <div>Step 3: CSS 숙련도(상, 중, 하)</div>
+        <fieldset class="field">
+            <input type="range" min="1" max="3"/>
+        </fieldset>
+        <button id="btn">제출</button>
+    </fieldset>
+    
+</body>
+</html>

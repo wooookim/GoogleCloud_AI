@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 소개</title>
+    <style>
+        body{
+            margin: 0;
+
+            background: url(./html5.png);   /*홈페이지 배경*/
+
+            font-family: "맑은고딕", Dotum, '굴림';  /*비슷한 서체 다 넣어보고 되는게 걸리면 됨*/
+        }
+
+        #top{
+            margin: 0;
+            padding-bottom: 30px;
+            height: 80px;
+            width: 100%;
+            border-bottom: 2px solid black;
+        }
+
+        #top h1{
+            color: #fff;
+            font-size: 2em;
+            text-shadow: 2px 2px 2px black;
+
+            background-color: yellow;
+        }
+
+        #top h2{
+            color: black;
+            font-size: 1.2em;
+
+            background-color: olive;
+            position: absolute;
+            top: 15px;
+            left: 150px;
+        }
+
+        #navi{
+            float: left;   /*선택자 기준 다음 요소들(하위x)*/
+            margin: 50px 10px 0;
+            padding: 0;
+            width: 20%;
+        }
+
+        #navi ul{
+            list-style-type: none;
+            margin: 10px 0 10px auto;
+            padding-top: 10px;
+        }
+
+        #navi ul li{
+            margin-top: 15px;
+        }
+
+        a{
+            margin: 10px 20px 10px 20px;
+            text-decoration: none;
+            font: bold 15px Dotum;
+            color: #1a1aff;
+        }
+
+        #contents{
+            float: left;
+            width: 70%;
+            margin-top: 50px;
+            border: 1px dotted black;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        #contents h4{
+            font-family: "굴림";
+            color: gray;
+            padding: 3px 10px 3px 3px;
+            font-size: 20px;
+        }
+
+        p{
+            font-size: 15px;
+            line-height: 25px;
+            color: #ff0066;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="top">
+        <!-- cf) head 태그는 문서에서 한 번만 사용, 제목이나 메타정보를 작성 -->
+        <h1>HTML5</h1>
+        <h2>웹 어플리케이션 일정</h2>
+    </header>
+    <nav id="navi">
+        <!-- header, aside 태그 안에 포함할 수 있고, 독립으로 사용도 가능: 위치 영향을 받지 않은 -->
+        <ul>
+            <li><a href="#">웹 어플리케이션</a></li>
+            <li><a href="#">플러그인이 필요없는 웹</a></li>
+            <li><a href="#">N-스크린 시대에 부합하는 웹</a></li>
+            <li><a href="#">웹 표준</a></li>
+        </ul>
+    </nav>
+
+    <section id="contents">
+    <!-- : 제목을 붙여서 컨텐츠 그룹을 묶어주는 태그
+        : 웹에서 재배포되면 안되는 컨텐츠를 지정할 때 사용
+         - 단순히 컨텐츠를 묶어서 사용하고 싶으면 div 태그를 사용 -->
+
+         <header>
+            <h3>웹 앱</h3>
+         </header>
+         
+         <article>
+        <!-- 웹 상에서 실제 내용을 작성할 부분
+            웹 컨텐츠를 검색하는 자동 로봇이 이 태그를 발견하면 배포 가능한 컨텐츠로 인식 -->
+            <h4>장점</h4>
+            <p>다양한 플랫폼에서 실행 가능</p>
+            <p>기존의 웹 개발환경에도 사용 가능</p>
+            <p>장치마다 다른 개발언어를 익힐 부담이 감소</p>
+            <p>업데이트가 쉽다</p>
+         </article>
+    </section>
+</body>
+</html>

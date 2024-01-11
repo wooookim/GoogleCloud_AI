@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새로 생긴 input 태그 유형</title>
+</head>
+<body>
+    <form action="#">
+        <label for="mail">메일주소</label>
+        <input type="email" name="email" id="mail" required placeholder="example@domain.com">
+
+        <!-- required: 자바스크립트 또는 ajax로 유효성 검사를 할 필요가 없음, 모바일에서 유용 -->
+
+        <input type="text" name="" id="" required>
+        <input type="submit" value="등록">
+    </form>
+
+    <br><br>
+
+    <form action="#">
+    <!-- 하나의 페이지에서 정보를 입력하는 영역이 구분되어 있는 경우
+        ex) 회원가입 시 여러 정보를 구분해서 받는 경우 -->
+        <fieldset>
+            <legend>주문정보</legend>
+            <label>상품검색</label>
+            <input type="search" name="" id="">
+            <ol>
+                <li>
+                    <label for="pname">상품명</label>
+                    <input type="text" name="" id="pname" size="30" placeholder="상품명을 정확히 입력해주세요" required autofocus autocomplete="off">
+
+                <!-- placeholder 힌트 제공
+                    required 필수입력 필드 지정
+                    autofocus 입력 필드에 커서 표시
+                    autocomplete 자동완성기능 조절 -->
+
+                </li>
+                <li>
+                    <label for="pnum">상품주문개수</label>
+                    <input type="number" name="" id="pnum" min="1" max="3" value="1">
+
+                <!-- number: 스핀박스로 표시할 수 있는 숫자 필드
+                        -value: 초기값
+                        -step: 단계 -->
+
+                </li>
+            </ol>
+        </fieldset>
+        
+        <fieldset>
+            <legend>배송일 지정</legend>
+            <ol>
+                <li>
+                    <p>주문이 폭주해 배송이 지연. 지정일 3일 이후 배송이 시작</p>
+                </li>
+                <li>
+                    <label for="pick">원하는 배송일</label>
+                    <input type="datetime-local" name="" id="pick">
+
+                    input type: date
+                              : month
+                              : time = 시간 표시
+                              : datetime = 날짜와 시간 표시 UTC시간대
+                              : datetime-local = 지역 시간대
+
+                </li>
+            </ol>
+        </fieldset>
+
+        <fieldset>
+            <legend>색상 선택</legend>
+            <ol>
+                <li>
+                    <input type="color" name="" id="">
+                </li>
+            </ol>
+        </fieldset>
+
+        <fieldset>
+            <input type="submit" value="주문">
+        </fieldset>
+    </form>
+</body>
+</html>
