@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select - option</title>
+    <script>
+        function printLoc(){
+            let idx = document.frm.loc.selectedIndex;
+
+            // option은 번호(인덱스)로 리턴
+            // console.log(idx);
+
+            if(idx == 1){
+                location.assign('https://www.mcdonalds.co.kr/kor/main.do');
+            }else if(idx == 2){
+                location.href = 'https://www.burgerking.co.kr/#/home';
+            }else if(idx == 3){
+                location.replace('https://www.kfckorea.com/');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>제주 맛집</h2>
+    <form action="" name="frm">
+        <select name="loc" id="" onchange="printLoc()">
+            <option value="--------">--------</option>
+            <option value="맥도날드">맥도날드</option>
+            <option value="버거킹">버거킹</option>
+            <option value="kfc">kfc</option>
+
+            https://www.burgerking.co.kr/#/home
+            https://www.mcdonalds.co.kr/kor/main.do
+            https://www.kfckorea.com/
+        </select>
+    </form>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core - 문자열</title>
+    <script>
+        let str1 = new String('hello js world');
+        let str2 = 'hello js world';
+
+        console.log(typeof(str1) + " " + typeof(str2));
+        console.dir(str1);
+        console.log('---------------------------');
+
+        console.log(str2.length);
+
+        /*let check = prompt('아이디입력', '8자 이상');
+        console.log(check);
+        if(check.length < 8){
+            alert('8자가 아님');
+        }else{
+            alert('welcome');
+        }*/
+        console.log('---------------------------');
+
+        let strFunctions = '';
+        strFunctions += "anchor :" + str2.anchor('javascript') + '<br/>';
+        strFunctions += 'big :' + str2.big() + '<br/>';
+        strFunctions += 'bold :' + str2.bold() + '<br/>';
+        strFunctions += 'color :' + str2.fontcolor('red') + '<br/>';
+        strFunctions += 'italics :' + str2.italics() + '<br/>';
+        strFunctions += 'link :' + str2.link("https://www.w3schools.com") + '<br/>';
+        strFunctions += 'small :' + str2.small() + '<br/>';
+        strFunctions += 'sub :' + str2.sub() + '<br/>';
+
+        //document.write(strFunctions);
+        alert(strFunctions);
+        console.log('---------------------------');
+
+        let msg = 'hello js world';
+        // let txt = msg.toLocaleLowerCase();;
+        
+        // 매서드 체이닝
+        txt = msg.anchor().anchor('wow');
+        alert(txt);
+        console.log('---------------------------');
+
+        let str3 = "ABCDEFG";
+        console.log(str3[1], str3.slice(0, 2), str3.substr(2, 3));
+        console.log(str3.indexOf('A'));
+
+        let str4 = 'aaa, bbb, ccc, ddd, eee, fff';
+        console.log(str4);
+        console.log(str4.split(""))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

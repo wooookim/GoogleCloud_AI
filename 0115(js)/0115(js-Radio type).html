@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function viewResult(){
+            let m1 = document.getElementById('m1');
+            let m2 = document.getElementById('m2');
+            let m3 = document.getElementById('m3');
+            let m4 = document.getElementById('m4');
+            let m5 = document.getElementById('m5');
+
+            // console.log(m1 + ' ' + m2 + ' ' + m3 + ' ' + m4 + ' ' + m5);
+            console.dir(m1);
+
+            // 포스터가 출력될 dom 지정
+            let img = document.getElementById('imgResult');
+            let src = '';
+            if (m1.checked){
+                src = './movie/movie_image1.jpg';
+            }else if(m2.checked){
+                src = './movie/movie_image2.jpg';
+            }else if(m3.checked){
+                src = './movie/movie_image3.jpg';
+            }else if(m4.checked){
+                src = './movie/movie_image4.jpg';
+            }else if(m5.checked){
+                src = './movie/movie_image5.jpg';
+            }
+
+            img.src = src;
+            console.log('---------------------------');
+
+            //DOM 객체 호출 시 id, class, tag name으로 찾지않고 문서의 path로도 찾기 가능
+            console.log(document.frm.movie[0].checked);
+        }
+    </script>
+</head>
+<body>
+    <h2>마음에 드는 영화 선택</h2>
+    <form action="" name="frm">
+        <input type="radio" name="movie" id="m1">외계+인 2부
+        <input type="radio" name="movie" id="m2">위시
+        <input type="radio" name="movie" id="m3">서울의 봄
+        <input type="radio" name="movie" id="m4">노량
+        <input type="radio" name="movie" id="m5">인투 더 월드
+
+        <input type="button" value="결과 보기" onclick="viewResult()">
+
+        <div>
+            <img src="" alt="" id="imgResult">
+        </div>
+    </form>
+</body>
+</html>

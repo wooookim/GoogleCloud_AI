@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core - 날짜, 숫자, 수학</title>
+    <script>
+        // 날짜 : Date
+        let now = new Date();
+        console.log(now);
+        console.dir(now);
+
+        // [실습] 현재 연월일시분초 출력
+        console.log(now.getFullYear() + " " + (1 + now.getMonth()) + " " + now.getDate() + " " + now.getHours() + " " + now.getMinutes() + " " + now.getSeconds() + " ")
+        console.log(now.toLocaleString());
+        console.log('-------------------')
+
+        let num1 = 613;
+        let num2 = new Number(613);
+        console.log(num1 + '-' + typeof(num1))
+        console.log(num2 + '-' + typeof(num2))
+        console.log(num1 + num2)
+
+        let num3 = 613.2345654872345;
+        console.log(num3.toFixed(1));  // 소수점 자릿수 조정
+        console.log(num3.toFixed(4));  // 소수점 자릿수 조정
+        console.log(Number.MAX_VALUE);
+        console.log('-------------------');
+
+        console.dir(Math);
+        console.log('원주율:' + Math.PI);
+        console.log('절댓값:' + Math.abs(-9));
+        console.log('제곱근:' + Math.sqrt(4));
+        console.log('0부터 1사이의 실수(무작위):' + Math.random());
+        console.log('소수점 절삭:' + Math.floor(3.14));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

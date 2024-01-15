@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imgObject</title>
+</head>
+<body>
+    <img src="C:\Users\user\gcp\0110(html, css)\진돗개2.jpg" alt="진돗개캐릭터" width="100px" id="img1">
+    <br>
+    <input type="button" value="확대" id="btn1" onclick="getImage()">
+    <input type="button" value="축소" id="btn1" onclick="getImage2()">
+
+    <script>
+        function getImage(){
+            let img1 = document.getElementById('img1');
+
+            console.log(img1); //함수 작성 상태 확인용
+            console.dir(img1); //함수 작성 상태 확인용
+
+            let w = img1.width;
+            img1.width = w*3;
+        }
+
+        function getImage2(x){
+            let img2 = document.getElementById('img1');
+
+            let w2 = img2.width;
+            img2.width = w2*x;
+        }
+    </script>
+</body>
+</html>

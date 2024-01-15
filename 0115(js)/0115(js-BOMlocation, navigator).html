@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - location / navigator</title>
+    <script>
+        // console.dir('location');
+        function goNaver(){
+            // location.href = 'https://www.naver.com'    // 히스토리 객체에 따로 저장
+            // location.replace('https://www.naver.com');    // 히스토리 객체에 정보를 남기지 않음 -> 뒤로가기 불가능
+        }
+
+        function goGoogle(){
+            // location.assign("https://www.google.com")   // 히스토리 객체에 정보를 남김 -> 뒤로가기 불가능
+
+            // [실습] 새탭으로 열기
+            // window.open("https://www.google.com")
+            window.open().location.assign("https://www.google.com")
+        }
+
+        // navigator
+        console.dir(navigator);
+        console.log(navigator.userAgent);
+        console.log(navigator.platform);
+
+
+    </script>
+</head>
+<body>
+    <a href="https://www.naver.com">네이버</a>
+    <input type="button" value="네이버" onclick="goNaver()">
+    <input type="button" value="구글" onclick="goGoogle()">
+</body>
+</html>
