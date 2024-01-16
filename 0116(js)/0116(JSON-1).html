@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let person1 = {};
+
+        person1.name = '이강인';
+        person1.age = 18;
+        person1.job = '축구선수';
+        person1.gender = '남성';
+
+        console.log(person1);
+
+        console.log('------------')
+
+        let person2 = {};
+
+        person2.name = '지소연';
+        person2.age = 30;
+        person2.job = '축구선수';
+        person2.gender = '여성';
+
+        console.log(person2);
+
+        console.log('------------')
+
+        // 성인 판별
+        function isAdult(obj){
+            let result;
+            if (obj.age>=19){
+                result = '성인'
+            } else{
+                result = '미성년'
+            }
+            console.log(obj.name + '님은 ' + result + ' 입니다.');
+        }
+
+        isAdult(person1);
+        isAdult(person2);
+        console.log('------------')
+
+        let person3 ={
+            name: '유관순',
+            job: '학생',
+            gender: '여성',
+            age: 17,
+            isAdult: function(){
+                let result;
+                if (this.age>=19){
+                    result = '성인'
+                } else{
+                    result = '미성년'
+                }
+                console.log(this.name + '님은 ' + result + ' 입니다.');                
+            }
+        }
+
+        person3.isAdult();
+
+    </script>
+</head>
+<body>
+    <!-- https://www.json.org/json-ko.html -->
+    <h2>JSON - JavaScript Object Notation: 경량의 데이터 교환 방식</h2>
+    <h3>기본 형태: {key:value}</h3>
+    <h3>전달 가능한 데이터</h3>
+    <p>
+        <ul>
+            <li>수 number</li>
+            <li>문자열 string</li>
+            <li>참/거진 boolean</li>
+            <li>배열 array</li>
+            <li>객체 object</li>
+            <li>null</li>
+        </ul>
+    </p>
+</body>
+</html>

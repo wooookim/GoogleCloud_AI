@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let object = {
+            name : '홍길동',
+            email : '123@1234.com'
+
+        }
+
+        console.log(object);
+
+        // document.write(object);
+        
+        // json 방식으로 전달하는 함수: stringify()
+        let obj = JSON.stringify(object)
+        document.write(obj);
+        /*
+        object => json => string => (eval) => object
+        cf) eval: 보안상 위험이 있을 수 있음(외부코드에 영향을 받을 수 있음) -> 권장하지 않음
+        */
+        let changed = JSON.parse(obj);
+        document.write(changed);
+
+        let person3 ={
+            name: '유관순',
+            job: '학생',
+            gender: '여성',
+            age: 17,
+            isAdult: function(){
+                let result;
+                if (this.age>=19){
+                    result = '성인'
+                } else{
+                    result = '미성년'
+                }
+                console.log(this.name + '님은 ' + result + ' 입니다.');                
+            }
+        }
+
+        console.log(JSON.parse(JSON.stringify(person3)));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

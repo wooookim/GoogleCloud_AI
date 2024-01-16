@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 80px;
+        }
+    </style>
+    <script>
+        function bigChance(){
+            // alert('대박나자');
+            // 1. 6개 숫자를 담을 변수(배열)
+            let rnd = new Array(6);
+
+            // 2-1. 1부터 45까지의 번호가 랜덤하게 6개 생성
+            for (let i=0; i<rnd.length; i++){
+                rnd[i] = (Math.floor(Math.random()*45+1));
+
+                // 2-2. 중복되지 않게 처리
+                // console.log(rnd[i]);
+                
+                for(let j = 0; j<i; j++){
+                    if (rnd[i]==rnd[j]){
+                        i -= 1;
+                        break;
+                    };
+                    //console.log(rnd[i]);
+                };
+            };// for() outer end
+
+            console.log('---------------------')
+
+            // 3. 정렬하기
+            console.log('정렬 전: ' + rnd);
+
+            /* let temp = 0;
+            for (let i = 0; i<rnd.length; i++){
+                for (let j=i+1; j<rnd.length; j++){
+                    if(rnd[i] > rnd[j]){
+                        temp = rnd[i];
+                        rnd[i] = rnd[j];
+                        rnd[j] = temp;
+                    }
+                }
+            }*/ // for end
+
+            rnd.sort(function(left, right){
+                return left - right;
+            })
+
+            console.log('정렬 후: ' + rnd);
+
+            // 4. 이미지 소스변경 후 브라우저에 출력
+            let img = document.getElementsByTagName('img');
+            //console.dir(img);
+            for(let i = 0; i<rnd.length;<i++){
+                img[i].src = './lottoball/ball'+rnd[i]+'.png';
+            }
+        };
+    </script>
+</head>
+<body>
+    <img src="./lottoball/q.jpg" alt="" id="img1">
+    <img src="./lottoball/q.jpg" alt="" id="img2">
+    <img src="./lottoball/q.jpg" alt="" id="img3">
+    <img src="./lottoball/q.jpg" alt="" id="img4">
+    <img src="./lottoball/q.jpg" alt="" id="img5">
+    <img src="./lottoball/q.jpg" alt="" id="img6">
+
+    <input type="button" value="대박" onclick="bigChance()" id="btn">
+</body>
+</html>

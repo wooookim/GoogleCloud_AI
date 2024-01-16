@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function imgChanged(){
+            let img = document.getElementById('poster');
+            let rnd = (Math.floor(Math.random()*10+1));
+
+            img.src = './movie/movie_image'+rnd+'.jpg';
+
+            window.setTimeout(imgChanged, 3000);
+        }
+    </script>
+</head>
+<body onload="imgChanged()">
+    <img src="./movie/movie_image1.jpg" alt="" id="poster">
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유효성 검사</title>
+    <script>
+        function checkForm(x){
+            // console.log(x);
+            // console.dir(x);
+            let id = x.form[0].value;
+            let pw = x.form[1].value;
+            let pwc = x.form[2].value;
+            let email = x.form[3].value;
+            
+            console.log('id: ' + id);
+            console.log('pw: ' + pw);
+            console.log('pwc: ' + pwc);
+            console.log('email: ' + email);
+
+            if (id == ''){
+                alert('아이디가 필요합니다');
+                //경고 확인 후 작성 필드로 포커스 추가
+                x.form[0].focus();
+                return;
+            } else if(pw == ''){
+                alert('비밀번호가 필요합니다');
+                //경고 확인 후 작성 필드로 포커스 추가
+                x.form[1].focus();
+                return;
+            } else if(pwc == ''){
+                alert('비밀번호 확인이 필요합니다');
+                //경고 확인 후 작성 필드로 포커스 추가
+                x.form[2].focus();
+                return;
+            } else if(email == ''){
+                alert('이메일이 필요합니다');
+                //경고 확인 후 작성 필드로 포커스 추가
+                x.form[3].focus();
+                return;
+            } else if(pw != pwc){
+                alert('비밀번호가 일치하지 않음');
+                x.form[2].value = '';
+                x.form[2].focus();
+                return;
+            } // if end
+
+            // 데이터를 다른 파일로 이동시키기
+            x.form.action = '0116(js-유효성검사(데이터)).html';
+            // 전달 방식 선택
+            x.form.method = 'get'
+            // 전송
+            x.form.submit();
+        }
+    </script>
+</head>
+<body>
+    <form action="#">
+        <table border="1" width="500" height="400">
+            <tr>
+                <th>아이디</th>
+                <td>
+                    <input type="text" name="userid" id="id">
+                </td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td>
+                    <input type="text" name="userpw" id="pw">
+                </td>
+            </tr>
+            <tr>
+                <th>비밀번호 확인</th>
+                <td>
+                    <input type="text" name="userpwc" id="pwc">
+                </td>
+            </tr>
+            <tr>
+                <th>email</th>
+                <td>
+                    <input type="text" name="useremail" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="전송" onclick="checkForm(this)">
+                    <!-- this = 객체 자신을 가리키는 키워드 -->
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

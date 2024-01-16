@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            // alert('바로 시작');
+
+            let time = document.getElementById('clock')
+            // 1초마다 반복
+            // setInterval(함수명, 실행시간)
+            setInterval(function(){
+                time.innerHTML = new Date().toString();
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>오늘은</h1>
+    <h1>화요일</h1>
+    <h1 id="clock"></h1>
+
+    
+</body>
+</html>
