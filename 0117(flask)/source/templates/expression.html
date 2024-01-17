@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expression.html</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        /* 크기 확인
+        .container{
+            max-width: 500px;
+            border: 1px solid red;
+        }
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>This is {{str}}</h1>
+        <p>리스트 출력</p>
+        <ul>
+            <li>{{array[0]}}</li>
+            <li>{{array[1]}}</li>
+            <li>{{array[2]}}</li>
+            <li>{{array[3]}}</li>
+            <li>{{array[4]}}</li>
+            <li>{{asdfasdfa}}</li>
+
+            {%for i in array%}<li>{{i}}</li>{%endfor%}
+        </ul>
+        <p>리스트 개별 요소 출력: {{array[2]}}</p>
+    </div>
+</body>
+</html>

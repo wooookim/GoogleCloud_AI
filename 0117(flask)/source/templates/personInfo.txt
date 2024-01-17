@@ -1,0 +1,1 @@
+{{data.name}}가/이 급여 {{data.salary}}
